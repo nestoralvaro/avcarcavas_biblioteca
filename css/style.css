@@ -1,0 +1,92 @@
+
+#header{
+    background: url("../images/header.png");
+    background-repeat:no-repeat;
+    overflow:hidden;
+    background-attachment:fixed;
+	background-position:top center;	
+    height:180px;
+    padding:15px 0px 5px 0px;
+    width:100%;
+}
+
+
+#left_menu {
+    width:15%;
+/*    height:300px;  */
+    float:left;
+/*    background:yellow; */
+}
+
+
+#right_menu {
+    width:15%;
+/*    height:300px; */
+    float:right;
+/*    background:blue; */
+}
+
+
+#content {
+    width:70%;
+/*    height:300px; */
+    float:left;
+/*    background:red; */
+}
+
+#content table {
+    margin:auto;
+}
+
+
+#admin_content {
+    width:99%;
+}
+
+#admin_content table {
+    margin:auto;
+}
+
+
+table {
+    text-align:center;
+}
+
+table th{
+    background:#B5B7BA;
+    color:#62789E;
+}
+
+table th a{
+    color:#62789E;
+}
+
+/* Colores de las disponibilidades */
+table tr.disponibilidad_1{
+    background:#62B563;
+}
+table tr.disponibilidad_2{
+    background:#E0D31B;
+}
+table tr.disponibilidad_3{
+    background:#6B7BE8;
+}
+table tr.disponibilidad_4{
+    background:#CC4B69;
+}
+
+table tr.highlight{
+    background:#E3E4E8;
+    font-weight:bold;
+}
+
+#footer {
+/*    position:absolute; bottom:0; */
+    clear:both;
+    padding-top:20px;
+    background:#CDD8FA;
+    color:#818285;
+    width:100%;
+    height:80px;
+    text-align:center;
+}

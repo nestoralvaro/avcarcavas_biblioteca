@@ -1,0 +1,26 @@
+
+////////////////////////
+    INFORMACION
+////////////////////////
+Gestor online de una biblioteca. Contiene avisos por mail y control de las acciones de los usuarios (tanto registrados como no registrados) así como de las acciones del administrador.
+
+También incluye un "CRON" para poder enviar avisos cuando expire el plazo de préstamo.
+
+
+////////////////////////
+    CONFIGURACION
+////////////////////////
+
+Se necesita lanzar el script de creación de la BBDD para poder realizar las lecturas de libros, así como el registro de eventos. También se necesita para el almacenamiento de los usuarios: "CARGA.sql"
+
+Una vez creada la BBDD se debe modificar el fichero "bbdd/conexion.php" con los datos para conectar con la BBDD.
+
+Una vez hecho esto ya se puede empezar a usar la aplicación al 100%.
+
+////////////////////////
+    MEJORA
+////////////////////////
+
+En el fichero "./validar_user.php" se encuentran hardcodeados los datos de validación del administrador ("USER_NAME" y "USER_PASS"). Deberían modificarse con otros valores.
+
+Se incluye un script de carga de libros en la BBDD "./inception.php" que se podría lanzar mediante una petición "http" (http://www.example.com/inception.php). Una vez ejecutada la carga es conveniente borrarlo del servidor para que no se vuelta a ejecutar.
