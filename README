@@ -15,6 +15,10 @@ Se necesita lanzar el script de creación de la BBDD para poder realizar las lec
 
 Una vez creada la BBDD se debe modificar el fichero "bbdd/conexion.php" con los datos para conectar con la BBDD.
 
+El cron ("./bbdd/cron.php") debe configurarse para que se ejecute 1 vez cada día. La sentencia para invocarlo será:
+wget -qO /dev/null http://www.example.com/bbdd/cron.php
+De esta forma se envía la salida a /dev/null. También hay que modificar la linea del cron donde se especifica el e-mail del administrador al que se enviarán los avisos ("$mailAdmin").
+
 Una vez hecho esto ya se puede empezar a usar la aplicación al 100%.
 
 ////////////////////////

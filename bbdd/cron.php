@@ -82,8 +82,7 @@ include("conexion.php");
 
     // Se manda el mail con los DNIs al administrador
     if ($listaDNI != "") {
-            $mailAdmin = "avcarcavas@hotmail.com";
-//        $mailAdmin = "nestoralvaro@gmail.com";
+            $mailAdmin = "user@example.com";
         $textoAdmin = "Hola, <b>Administrador</b><br/>";
         $textoAdmin .= "Acaba de expirar el prestamo de los libros de los usuarios con DNI: <b><ul>" . $listaDNI . "</ul></b>";
         $mail_body_admin = wordwrap($textoAdmin, 70);
