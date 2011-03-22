@@ -15,16 +15,26 @@ Se necesita lanzar el script de creación de la BBDD para poder realizar las lec
 
 Una vez creada la BBDD se debe modificar el fichero "bbdd/conexion.php" con los datos para conectar con la BBDD.
 
-El cron ("./bbdd/cron.php") debe configurarse para que se ejecute 1 vez cada día. La sentencia para invocarlo será:
-wget -qO /dev/null http://www.example.com/bbdd/cron.php
-De esta forma se envía la salida a /dev/null. También hay que modificar la linea del cron donde se especifica el e-mail del administrador al que se enviarán los avisos ("$mailAdmin").
-
 Una vez hecho esto ya se puede empezar a usar la aplicación al 100%.
 
 ////////////////////////
-    MEJORA
+    MEJORAS
 ////////////////////////
 
+-Admin-
 En el fichero "./validar_user.php" se encuentran hardcodeados los datos de validación del administrador ("USER_NAME" y "USER_PASS"). Deberían modificarse con otros valores.
 
+-Carga-
 Se incluye un script de carga de libros en la BBDD "./inception.php" que se podría lanzar mediante una petición "http" (http://www.example.com/inception.php). Una vez ejecutada la carga es conveniente borrarlo del servidor para que no se vuelta a ejecutar.
+
+-Cron-
+El cron ("./bbdd/cron.php") debe configurarse para que se ejecute 1 vez cada día. La sentencia para invocarlo será:
+wget -qO /dev/null http://www.example.com/bbdd/cron.php
+De esta forma se envía la salida a /dev/null. 
+También hay que modificar la linea del cron donde se especifica el e-mail del administrador al que se enviarán los avisos ("$mailAdmin").
+
+-Feeds-
+El menu de la derecha muestra los feed de las noticias. 
+Para apuntar a otro feed se tiene que modificar "$av_feed" dentro del fichero "common/right_menu.php"
+
+////////////////////////
