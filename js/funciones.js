@@ -1,3 +1,10 @@
+// Fix para corregir el error del trim en IE
+if(typeof String.prototype.trim !== 'function') {
+  String.prototype.trim = function() {
+    return this.replace(/^\s+|\s+$/g, ''); 
+  }
+}
+
 // Permitir únicamente la entrada de números, enter y backspace
 function soloNumeros(evt) {
     // NOTE: Backspace = 8, Enter = 13, '0' = 48, '9' = 57
@@ -377,4 +384,5 @@ function str_replace(search, replace, subject) {
 	}
 	return sa ? s : s[0];
 }
+
 
